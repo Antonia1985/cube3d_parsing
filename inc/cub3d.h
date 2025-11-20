@@ -11,6 +11,7 @@
 //# define PI 3.14159265359
 # define PI 3.1415926535897932384626 //whats highest precision possible/necessary?
 
+
 # define W 119
 # define A 97
 # define S 115
@@ -62,6 +63,7 @@ typedef struct s_map {
     char  **grid;
     int  width;
     int  height;
+    int     capacity;
 } t_map;
 
 typedef struct s_pos{
@@ -84,8 +86,9 @@ typedef struct s_cub
 
 void	make_window(t_cub *cub);
 void    clean_up(t_cub *cub);
-void	error_exit(t_cub *cub, char *msg);
-int parse_file(char* filename, t_cub* cub);
+void	error_exit(t_cub *cub, char *msg, char** to_be_freed);
+int     parse_file(char* filename, t_cub* cub);
+void    free_array(char **arr, int grid_height);
 
 #endif //INC_42_09_CUBE3D_CUBE3D_H
 

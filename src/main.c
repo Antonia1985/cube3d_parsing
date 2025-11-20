@@ -12,18 +12,19 @@
 
 #include "../inc/cub3d.h"
 
-
 int	main(int argc, char **argv)
 {
-	t_cub	cub;
-
 	(void)argv;
-	ft_memset(&cub, 0, sizeof(t_cub));
+	t_cub *cub = ft_calloc(1, sizeof(*cub));   // zero-initialized struct
+    if (!cub) 
+		error_exit(cub, "Error\nMalloc failure\n", NULL);
 	if (argc != 2)   // to do:  ./cub3D 'map.cub" 
 	{ // || !check_file_ext(argc, argv)
-		error_exit(&cub,
-			"Please provide exactly one valid .cub file as an argument\n");
+		error_exit(cub,
+			"Please provide exactly one valid .cub file as an argument\n", NULL);
 	}	
-	parse_file(argv[1], &cub);
+	parse_file(argv[1], cub);
+	clean_up(cub);
+
 	return (0);
 }
