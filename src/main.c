@@ -1,45 +1,4 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: mdiederi <marvin@42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/20 10:13:33 by mdiederi          #+#    #+#             */
-/*   Updated: 2025/10/20 10:14:15 by mdiederi         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "../inc/cub3d.h"
-
-/*void	init_col(t_cub *cub)
-{
-	t_col	*col;
-	t_rgb	white;
-
-	white.r = 255;
-	white.g = 255;
-	white.b = 255;
-	col = malloc(sizeof(t_col));
-	col->no_tex_p = textures / 014 - greystone.xpm;
-	col->so_tex_p = textures / 013 - brownstone.xpm;
-	col->we_tex_p = textures / 002 - rooftiles3bright.xpm;
-	col->ea_tex_p = textures / 034 - stonemould.xpm;
-	col->floor = white;
-	col->ceil = white;
-	cub->col = col;
-}
-
-int	get_row_width(t_map *map, int row)
-{
-	return (map->widths[row]); // todo make safe
-}
-
-void	init_map(t_cub *cub)
-{
-
-}*/
-
 
 void	init_cub(t_cub *cub)
 {
